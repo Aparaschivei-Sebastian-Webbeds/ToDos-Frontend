@@ -1,17 +1,15 @@
 import { Box, Button, TextField } from '@material-ui/core';
-import React,{useContext, useState} from 'react';
-import { TasksContext2 } from '../contexts/TasksContext2';
-
+import React,{ useState} from 'react';
+import { styles } from '../styles/styles';
 const AddTaskForm=({addTask})=>{
-    const context=useContext(TasksContext2);
-    const classes=context.classes;
+    
     const[text,setText] = useState('');
     const handleSubmit=(e)=>{
         e.preventDefault();
         addTask(text);
         setText('');
     }
-    
+    const classes=styles();
     return(
         <div>
             <form onSubmit={handleSubmit}>

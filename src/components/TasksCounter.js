@@ -1,9 +1,9 @@
 import React,{useContext} from 'react';
-
-import { TasksContext2 } from '../contexts/TasksContext2';
+import { styles} from '../styles/styles';
+import { TasksContext } from '../contexts/TasksContext';
 const TasksCounter = () => {
-    const context=useContext(TasksContext2);
-    const classes=context.classes;
+    const context=useContext(TasksContext);
+    const classes=styles();
     return (
         
                 <div className={classes.flexInline}>
